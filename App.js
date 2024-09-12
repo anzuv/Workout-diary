@@ -1,35 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
-import Styles from './styles/Styles.js';
-
-function AddworkoutScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Add workout</Text>
-      
-    </View>
-  );
-}
-
-function WorkoutlistScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>List of workouts</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings</Text>
-    </View>
-  );
-}
+import WorkoutlistScreen from './components/List.js';
+import SettingsScreen from './components/Settings.js';
+import AddworkoutScreen from './components/Workout.js';
 
 const Tab = createBottomTabNavigator();
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, View, SafeAreaView, } from 'react-native';
-import { SegmentedButtons, } from 'react-native-paper';
+import { View, SafeAreaView } from 'react-native';
+import { SegmentedButtons, TextInput } from 'react-native-paper';
 import Styles from '../styles/Styles.js';
 
 const MyWorkout = () => {
@@ -8,19 +8,19 @@ const MyWorkout = () => {
 
   return (
     <SafeAreaView style={Styles.segmentedButton}>
-      <SegmentedButtons style={Styles.segmentedButton} 
+      <SegmentedButtons
         value={value}
         onValueChange={setValue}
         buttons={[
           {
             value: 'Run',
             label: 'Run',
-            icon: 'run', 
+            icon: 'run',
           },
           {
             value: 'Ski',
             label: 'Ski',
-            icon: 'ski', 
+            icon: 'ski',
           },
           {
             value: 'Swim',
@@ -30,20 +30,41 @@ const MyWorkout = () => {
         ]}
       />
     </SafeAreaView>
-
   );
 };
 
-
-
 function AddworkoutScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-       <Text>
-        <MyWorkout />  {}
-       </Text>
-      </View>
-    );
-  }
+  
+  const TextBox = () => {
+    const [distance, setDistance] = React.useState("");
+    const [duration, setDuration] = React.useState("");
 
-  export default AddworkoutScreen;
+    return (
+      <>
+        <TextInput
+          style={Styles.textbox}
+          label="Distance (km)"
+          value={distance}
+          onChangeText={setDistance}
+          
+        />
+        <TextInput 
+          style={Styles.textbox}
+          label="Duration (min)"
+          value={duration}
+          onChangeText={setDuration}
+         
+        />
+      </>
+    );
+  };
+
+  return (
+    <View>
+      <MyWorkout />
+      <TextBox />
+    </View>
+  );
+}
+
+export default AddworkoutScreen;

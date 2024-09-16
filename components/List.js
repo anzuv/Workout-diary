@@ -59,6 +59,8 @@ const WorkoutListScreen = () => {
               left={(props) => (
                 <FontAwesome5 {...props} name={getIconForType(item.type)} size={24} color="#8b37d0" />
               )}
+              titleStyle={{ color: '#8b37d0' }} 
+              subtitleStyle={{ color: '#8b37d0' }} 
             />
           </Card>
         )}

@@ -39,13 +39,9 @@ export default StyleSheet.create({
   },
    modalContainer: {
     backgroundColor: 'white',
-    padding: 10,
-    borderRadius: 10,
-    elevation: 5,
-    shadowColor: '#0f0e0e',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
+    padding: 15,
+
+
   },
   calendar: {
     borderWidth: 1,
@@ -53,7 +49,7 @@ export default StyleSheet.create({
   },
   dateButton: {
     padding: 10,
-    margin: 10,
+    margin: 20,
     borderRadius: 4,
     borderWidth: 1,
     borderColor: theme.colors.text, 
@@ -92,8 +88,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 5,
-    borderRadius: 5,
-    borderWidth: 1,
+    borderRadius: 2,
     borderBlockColor: theme.colors.text,
     backgroundColor: theme.colors.background,
   },

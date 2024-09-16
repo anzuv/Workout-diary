@@ -74,7 +74,11 @@ const AddWorkoutScreen = () => {
                 value={distance}
                 onChangeText={setDistance}
                 keyboardType="numeric" 
-                mode="outlined" 
+                mode="flat" 
+                theme={{ colors: { 
+                  primary: '#6800ad', 
+                  text: '#6800ad',
+                  placeholder: '#6800ad' } }}
               />
 
               <TextInput
@@ -83,7 +87,11 @@ const AddWorkoutScreen = () => {
                 value={duration}
                 onChangeText={setDuration}
                 keyboardType="numeric" 
-                mode="outlined"
+                mode="flat"
+                theme={{ colors: { 
+                  primary: '#6800ad', 
+                  text: '#6800ad',
+                  placeholder: '#6800ad'} }}
               />
             </View>
           </PaperProvider>

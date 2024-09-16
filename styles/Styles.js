@@ -34,6 +34,9 @@ export default StyleSheet.create({
     marginBottom: 15,
     backgroundColor: theme.colors.background,
   },
+  test: {
+    color: theme.colors.background,
+  },
    modalContainer: {
     backgroundColor: 'white',
     padding: 10,
@@ -50,9 +53,10 @@ export default StyleSheet.create({
   },
   dateButton: {
     padding: 10,
-    borderRadius: 8,
+    margin: 10,
+    borderRadius: 4,
     borderWidth: 1,
-    borderColor: '#888', 
+    borderColor: theme.colors.text, 
     alignItems: 'center',
     backgroundColor: theme.colors.background, 
   },

@@ -61,7 +61,7 @@ const WorkoutListScreen = () => {
           <Card style={Styles.card}>
             <Card.Title
               title={item.date}
-              subtitle={`Etäisyys: ${formatDistance(item.distance)} ${unit === 'km' ? 'km' : 'mi'}, Kesto: ${item.duration} min`}              left={(props) => (<FontAwesome5 {...props} name={getIconForType(item.type)} size={24} color="#8b37d0" />)}
+              subtitle={`Distance: ${formatDistance(item.distance)} ${unit === 'km' ? 'km' : 'mi'}, Duration: ${item.duration} min`}              left={(props) => (<FontAwesome5 {...props} name={getIconForType(item.type)} size={24} color="#8b37d0" />)}
               titleStyle={{ color: '#8b37d0' }} 
               subtitleStyle={{ color: '#8b37d0' }} 
             />

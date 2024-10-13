@@ -10,6 +10,8 @@ const WorkoutListScreen = () => {
   const { workouts } = useContext(WorkoutContext);
   const { unit } = useContext(UnitContext);
 
+  const convertToMiles = (km) => (km / 1.60934).toFixed(2);
+
   const totalDistance = (type) => {
     return workouts
       .filter((workout) => workout.type === type)
@@ -29,6 +31,10 @@ const WorkoutListScreen = () => {
       default:
         return 'help';
     }
+  };
+
+  const formatDistance = (distance) => {
+    return unit === 'mi' ? convertToMiles(distance) : distance.toFixed(2);
   };
 
   return (
@@ -55,10 +61,7 @@ const WorkoutListScreen = () => {
           <Card style={Styles.card}>
             <Card.Title
               title={item.date}
-              subtitle={`Distance: ${item.distance.toFixed(2)} km, Duration: ${item.duration} min`}
-              left={(props) => (
-                <FontAwesome5 {...props} name={getIconForType(item.type)} size={24} color="#8b37d0" />
-              )}
+              subtitle={`Etäisyys: ${formatDistance(item.distance)} ${unit === 'km' ? 'km' : 'mi'}, Kesto: ${item.duration} min`}              left={(props) => (<FontAwesome5 {...props} name={getIconForType(item.type)} size={24} color="#8b37d0" />)}
               titleStyle={{ color: '#8b37d0' }} 
               subtitleStyle={{ color: '#8b37d0' }} 
             />
